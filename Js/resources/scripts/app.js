@@ -91,6 +91,8 @@ challengeTwoPara(3, 5);
 
 // END Challenge Two
 
+//EVENT LISTENER TEST
+
 var _eventListener = document.getElementById("userInputB1").addEventListener("click", inputFun);
 
 // document. refers to the DOM, any communication between HTML & Js uses this
@@ -179,6 +181,7 @@ function inputFunFour() {
 
     document.getElementById("userInputDis").innerHTML = alert(userInput);
 
+
 };
 
 // END Challenge Five
@@ -207,7 +210,7 @@ function inputFunFive(userInput, userInputTwo, userInputThree) {
 
 // END Challenge Six
 
-// START Challenge Seven
+// START Challenge Seven - Create a two variables with the same name, one global and one local & display them.
 var _eventListenerSix = document.getElementById("userInputB6").addEventListener("click", inputFunSix);
 
 var golbalLocal = "Global";
@@ -225,7 +228,7 @@ console.log(golbalLocal);
     console.log(golbalLocal);
 
     document.getElementById("userInputDisTwo").innerHTML  = "Local variable: " + golbalLocal;
-
+// NB: We are defining two seperate varialbles here, one global, one local. If you don't use the var keyword to define the local variable it will overwrite the global one when the function is run.You can't redefine global variables to be used only locally
 };
 
 inputFunSix();
@@ -272,13 +275,12 @@ var today = new Date();
 var inputDate = new Date(document.getElementById("otherDate").value);
 
 var timeDiff = Math.abs(today.getTime() - age.getTime());
-var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-var diffYears = Math.floor(diffDays /365);
+var diffYears = Math.floor((timeDiff / (1000 * 3600 * 24))/365);
 
 var otherTimeDiff = Math.abs(inputDate.getTime() - age.getTime());
-var otherDiffDays = Math.ceil(otherTimeDiff / (1000 * 3600 * 24));
-var otherDiffYears = Math.floor(otherDiffDays /365);
-var otherDiffYearsCheck = Math.ceil(otherDiffDays /365);
+var otherDiffYears = Math.floor((otherTimeDiff / (1000 * 3600 * 24)/365));
+var otherDiffYearsCheck = Math.ceil((otherTimeDiff / (1000 * 3600 * 24)/365));
+
 
     if (otherDiffYearsCheck <=0) {
         otherDiffYears = "You weren't born!"
