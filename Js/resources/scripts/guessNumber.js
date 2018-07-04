@@ -1,4 +1,4 @@
-var _eventListener = document.getElementById("startBtn").addEventListener("click", gameStart);
+var _eventListenerGame = document.getElementById("startBtn").addEventListener("click", gameStart);
 
 function gameStart(){
 document.getElementById("resultGuess").innerHTML = ""
@@ -9,7 +9,7 @@ document.getElementById("resultGuess").innerHTML = ""
 var randNumber = Math.ceil(Math.random()*100)
 console.log(randNumber)
 var success = false;
-var _eventListener = document.getElementById("btn2").addEventListener("click", checkGuess);
+var _eventListenerReset = document.getElementById("btn2").addEventListener("click", checkGuess);
 var guessNumber = 0;
 
 function checkGuess(){
