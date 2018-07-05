@@ -1,6 +1,8 @@
-// --------------------------------------DAY 1-------------------------------------------------------------------------------
+// -----------------------------------------DAY 1----------------------------------------------------------------
 
 //SYNTAX PARSER - SOMETHING THAT READES & TRANSLATES YOUR CODE
+
+//----------SYNTAX FOR VARIABLES---------
 
 //var a = "Hello World!";
 
@@ -31,6 +33,9 @@ console.log(nameOfVariable);
 //- Starting with numbers
 //- The same name as other variables
 //- If you have multiple Js files linked to one HTML then be careful with names as if you have variables with the same name in the different files then they will clash. Look for this when troubleshooting.
+
+
+// ---------SYNTAX FOR FUNCTIONS--------
 
 //Declares function
 function nameOfFunction() {
@@ -293,9 +298,9 @@ function calcAge() {
 
 }
 
-//---------------------------DAY 2------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------DAY 2-------------------------------------------------------------------------
 
-//FOR LOOPS
+//---------FOR LOOPS------
 //Syntax:
 //for(initialisation; test condition; iteration statement){
 //    code to be executed if the test condidtion is true
@@ -337,7 +342,7 @@ for (number = 1; number <= 50; number += 1) {
 
 // END Challenge One
 
-// IF STATEMENT SYNTAX
+// -------IF STATEMENT SYNTAX--------
 
 // if (condition) {
 //code to be executed if the condition is true
@@ -429,6 +434,10 @@ function inputFunTen() {
     var nestOne;
     var nestTwo = 1;
     // Need to define the variable for the second sequence outside the loop as otherwise it will iterate through the second loop for each iteration of the first loop
+    document.getElementById("userInputDisEight").innerHTML = ""
+    document.getElementById("userInputDisNine").innerHTML = ""
+    // These are used to clear the input div as because we are adding to it rather than overwriting it the loop will just add itself to the end of the previous challenge. If we wanted to be completley thourough we would add these to every challenge.
+
     for (nestOne = 1; nestOne <= 10; nestOne += 1) {
         document.getElementById("userInputDisEight").innerHTML += nestOne + " ";
         for (nestTwo; nestTwo <= 10; nestTwo += 1) {
@@ -511,7 +520,7 @@ function inputFunElevenTwo() {
 
 // END Advanced Challenge One
 
-// SYNTAX FOR A WHILE LOOP
+// ------SYNTAX FOR A WHILE LOOP------
 
 // while(condition) {code the executes if the condition is true}
 
@@ -542,7 +551,7 @@ while (whileTest <= 10) {
 // END Challenge Six
 
 
-// SYNTAX FOR A DO WHILE LOOP
+// -------SYNTAX FOR A DO WHILE LOOP------
 
 // do{
 //code to be executed
@@ -569,7 +578,7 @@ do {
     doWhileTest += 1;
 } while (doWhileTest <= 10);
 
-//END Challenge Seven
+// END Challenge Seven
 
 // START Advanced Challenge Two - Number Game
 
@@ -621,10 +630,10 @@ function gameStart() {
 
 // END Advanced Challenge Two
 
-//-------------------------------------DAY 3 -------------------------------
+//---------------------------------------------DAY 3 ------------------------------------------------
 
 
-//SYNTAX FOR SWITCH STATEMENTS
+//------SYNTAX FOR SWITCH STATEMENTS------
 
 // switch(expression){
 //case condition1: statement;
@@ -660,7 +669,7 @@ console.log("Switch statment end")
 
 // To enter a breakpoint in code go to console and click on the line you want to break the code at, code will run until that point
 
-//SWITCH EG
+//----SWITCH EG----
 
 var _eventListenerTwelve = document.getElementById("userInputB12").addEventListener("click", inputFunTwelve);
 
@@ -781,7 +790,7 @@ function inputFunTwelve() {
 //timeNow(); // Run the function
 //setInterval(timeNow, 1000) //Reloads the specified function again every 1000 miliseconds ie this will update the clock every 1000 miliseconds aka every second
 
-//SYNTAX FOR ARRAYS
+//---------SYNTAX FOR ARRAYS---------
 
 //Arrays are a collection of things
 
@@ -811,18 +820,14 @@ randArrayTypes[4](randArrayTypes[3]._name); // So here the function at position 
 var _eventListenerThirteen = document.getElementById("userInputB13").addEventListener("click", inputFunThirteen);
 
 function inputFunThirteen() {
-    var arrayOne = []
-
+    var arrayOne = [];
     var firstInput = document.getElementById("userInputSix").value;
     var secondInput = document.getElementById("userInputSeven").value;
     var thirdInput = document.getElementById("userInputEight").value;
-
     arrayOne.push(firstInput, secondInput, thirdInput)
-
     document.getElementById("userInputDisEleven").innerHTML = arrayOne;
 
 }
-
 // END Challenge One
 
 // START Challenge Two - Collect a user input and allocate it to a new array using the push method, display the array and the length of the array using array.length on the webpage
@@ -830,27 +835,24 @@ function inputFunThirteen() {
 var _eventListenerFourteen = document.getElementById("userInputB14").addEventListener("click", inputFunFourteen);
 var arrayTwo = [];
 // To ensure the array remembers the input it needs to be declared globally
+
 function inputFunFourteen() {
-
-
     var fourthInput = document.getElementById("userInputSix").value;
     arrayTwo.push(fourthInput)
 
     document.getElementById("userInputDisEleven").innerHTML = arrayTwo + " Length: " + arrayTwo.length;
 }
-
 // END Challenge Two
 
 // START Challenge Three - Add & Remove first and last elements on and off an array using shift, unshift, push and pop methods
 
-var arrayThree = ["Default", "Values"]
+var arrayThree = ["Default", "Values"];
 
 var _eventListenerFifteen = document.getElementById("userInputB15").addEventListener("click", inputFunFifteen);
 
 function inputFunFifteen() {
     var pushInput = document.getElementById("userInputSix").value;
-    arrayThree.push(pushInput)
-
+    arrayThree.push(pushInput);
     document.getElementById("userInputDisEleven").innerHTML = arrayThree + " Length: " + arrayThree.length;
 }
 
@@ -866,7 +868,6 @@ var _eventListenerSeventeen = document.getElementById("userInputB17").addEventLi
 function inputFunSeventeen() {
     var unshiftInput = document.getElementById("userInputSix").value;
     arrayThree.unshift(unshiftInput)
-
     document.getElementById("userInputDisEleven").innerHTML = arrayThree + " Length: " + arrayThree.length;
 }
 
@@ -876,7 +877,6 @@ function inputFunEighteen() {
     arrayThree.shift()
     document.getElementById("userInputDisEleven").innerHTML = arrayThree + " Length: " + arrayThree.length;
 }
-
 // END Challenge Three
 
 // START Challenge Four - Add to an array at a specific index point in the array
@@ -889,9 +889,6 @@ function inputFunNineteen() {
     document.getElementById("userInputDisEleven").innerHTML = arrayFour + " Length: " + arrayFour.length;
 
 }
-
-
-
 // END Challenge Four
 
 // START Challenge Five - Create an array variable with 10 elements and using a for loop display each element on the webpage
@@ -900,7 +897,6 @@ var _eventListenerTwenty = document.getElementById("userInputB20").addEventListe
 var arrayFive = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function inputFunTwenty() {
-
     for (i = 0; i < arrayFive.length; i += 1) {
         document.getElementById("userInputDisEleven").innerHTML += arrayFive[i] + " ";
     }
@@ -915,7 +911,6 @@ var arrayCountries = ["England", "France", "Wales", "Ireland", "Scotland", "Ital
 
 function inputFunTwentyOne() {
     var country = document.getElementById("userInputSix").value;
-
     if (arrayCountries.indexOf(country) >= 0) {
         document.getElementById("userInputDisEleven").innerHTML = country + " is present! It is at position: [" + arrayCountries.indexOf(country) + "]";
     } else {
@@ -925,7 +920,6 @@ function inputFunTwentyOne() {
 
 // END Challenge Six
 
-
 // START Advanced Challenge One - Array Project - Random Winner
 
 var _eventListenerTwentyTwo = document.getElementById("userInputB22").addEventListener("click", addName);
@@ -933,7 +927,6 @@ var _eventListenerTwentyTwo = document.getElementById("userInputB22").addEventLi
 var contestants = [];
 
 function addName() {
-
     var _name = document.getElementById("userInputNine").value;
     contestants.push(_name)
     document.getElementById("userInputDisTwelve").innerHTML = contestants;
@@ -942,19 +935,16 @@ function addName() {
 var _eventListenerTwentyThree = document.getElementById("userInputB23").addEventListener("click", generateWinner);
 
 function generateWinner() {
-
     winnerNumber = Math.floor(Math.random() * contestants.length);
-
     document.getElementById("userInputDisThirteen").innerHTML = contestants[winnerNumber];
-
 }
 
 // END Advanced Challenge One
 
-
 // START Advanced Challenge Two - Interest Only Calculator
 
-var _eventListenerTwentyFour = document.getElementById("userInputB24").addEventListener("click", calculateInterest);
+//var _eventListenerTwentyFour = document.getElementById("userInputB24").addEventListener("click", calculateInterest);
+//Event listener not required as we aren't using the button atm
 
 function calculateInterest() {
 
@@ -962,16 +952,254 @@ function calculateInterest() {
     var interestRate = document.getElementById("userInputEleven").value / 100;
     var loanLength = document.getElementById("userInputTwelve").value;
     // Validation to ensure the fields are filled in
-    if (loan == "" || interestRate == "" || loanLength == "" ) {
+    if (loan == "" || interestRate == "" || loanLength == "") {
         //alert("Please fill in all the fields") Only needed if using a button to initialise the calculation
         document.getElementById("userInputDisFourteen").innerHTML = ""; //Only needed when using onkeyup
     } else {
-    var interestTotal = (loan * interestRate) * (loanLength / 12)
-    interestTotal = interestTotal.toFixed(2);
-    //.toFixed(2) will limit the number to 2 decimal places
-    document.getElementById("userInputDisFourteen").innerHTML = "£" + interestTotal;
-}
+        var interestTotal = (loan * interestRate) * (loanLength / 12)
+        interestTotal = interestTotal.toFixed(2);
+        //.toFixed(2) will limit the number to 2 decimal places
+        document.getElementById("userInputDisFourteen").innerHTML = "£" + interestTotal;
+    }
 
 }
 
 // END Advanced Challenge Two
+
+
+// -------------------------------------------DAY 4------------------------------------------------------
+
+
+//--------OBJECTS SYNTAX------
+
+// Objects are a collection of properties and methods
+
+//First way of declaring an Object
+var studentOne = new Object();
+
+studentOne["firstName"] = "Nissa"; // Objects always have name value pairs. [] do not initialise an array in this case, they are an operator that takes the studentOne object and sets the property, in this case a string
+studentOne["surname"] = "Revane";
+
+console.log(studentOne);
+
+console.log(studentOne.firstName);
+
+studentOne.address = new Object();
+// Can nest an object inside another object
+
+studentOne.address["street"] = "Resevoir Walk";
+// Can add properties to the nested object like this, however best practice would be;
+
+studentOne.address.town = "Sea Gate";
+// The dot precedemce works from left to right which means we can continuously create more children
+
+studentOne.address.houseNumber = "3";
+
+studentOne.address.postcode = "ZND1 KAR";
+
+console.log(studentOne.address.street)
+
+console.log(studentOne);
+
+// Second way of declaring an object
+
+var studentTwo = {
+    // whenever we use {} after declaring a variable it is equivalent to using new Object()
+    firstName: "Jace",
+    surname: "Beleran",
+    //use commas not ; because its a list, code isn't ending
+    address: {
+        //nested object with second method
+        houseNumber: "5",
+        street: "Tin Street",
+        town: "Ravnica",
+        postcode: "G1LD PCT"
+    }
+}
+
+function greetStudent(studentNumber) {
+    console.log("Good Morning " + studentNumber.firstName)
+}
+
+greetStudent(studentOne);
+greetStudent(studentTwo);
+
+studentTwo.dob = {
+    dayOfBirth: "5",
+    monthOfBirth: "May",
+    yearOfBirth: "1993"
+}
+
+// Can also add nested objects after the creation of the objects like this to add multiple properties at the same time
+
+console.log(studentTwo);
+console.log(studentOne);
+
+
+// START Challenge One - Create an Object with 3 properties and display the object back to the DOM
+
+var watch = {
+    white: "Gideon ",
+    black: "Lilli ",
+    red: "Chandra "
+}
+
+var _eventListenerTwentyFive = document.getElementById("userInputB25").addEventListener("click", inputFunTwentyFive);
+
+function inputFunTwentyFive() {
+    document.getElementById("userInputDisFifteen").innerHTML = watch.white + watch.black + watch.red;
+}
+
+// END Challenge One
+
+// START Challenge Two - Create an object and output each object property in a concatenated string onto a webpage
+
+var _eventListenerTwentySix = document.getElementById("userInputB26").addEventListener("click", inputFunTwentySix);
+
+var sentance = {
+    wordOne: "This",
+    wordTwo: "is",
+    wordThree: "a",
+    wordFour: "Sentance"
+}
+
+function inputFunTwentySix() {
+    document.getElementById("userInputDisFifteen").innerHTML = sentance.wordOne + " " + sentance.wordTwo + " " + sentance.wordThree + " " + sentance.wordFour;
+}
+
+// END Challenge Two
+
+// Start Challenge Three - Create an object with properties and a method (function) - access the method(output result to the DOM)
+
+var _eventListenerTwentySeven = document.getElementById("userInputB27").addEventListener("click", inputFunTwentySeven);
+
+var objectMethod = {
+    propOne: "One",
+    propTwo: "Two",
+
+    method: function () {
+        document.getElementById("userInputDisFifteen").innerHTML = this.propOne + " " + this.propTwo;
+    }
+}
+
+function inputFunTwentySeven() {
+    objectMethod.method();
+}
+
+// END Challenge Three
+
+// START Challenge Four - Create a nested object and display the nested objecet property onto the webpage
+
+var _eventListenerTwentyEight = document.getElementById("userInputB28").addEventListener("click", inputFunTwentyEight);
+
+var nestedEG = {
+    notNested: "Not Nested",
+    isNested: {
+        nestedOne: "1st Nested Property",
+        nestedTwo: "2nd Nested Property"
+    }
+}
+
+function inputFunTwentyEight() {
+    document.getElementById("userInputDisFifteen").innerHTML = nestedEG.isNested.nestedOne + ", " + nestedEG.isNested.nestedTwo;
+}
+
+// END Challenge Four
+
+// START Challenge Five - Build an object constructor: a) create 2 instances of the object b) display the properties of the object instances onto the webpage
+
+var _eventListenerTwentyNine = document.getElementById("userInputB29").addEventListener("click", inputFunTwentyNine)
+
+function inputFunTwentyNine() {
+
+    function Hotel(name, rooms, booked) {
+        this.name = name;
+        this.rooms = rooms;
+        this.booked = booked;
+    }
+
+    var hotelOne = new Hotel("Hotel One", "Rooms: 50", "Booked: 25")
+    var hotelTwo = new Hotel("Hotel Two", "Rooms: 30", "Booked: 14")
+
+    document.getElementById("userInputDisFifteen").innerHTML = hotelOne.name + " " + hotelOne.rooms + " " + hotelOne.booked
+    document.getElementById("userInputDisSixteen").innerHTML = hotelTwo.name + " " + hotelTwo.rooms + " " + hotelTwo.booked
+}
+
+// END Challenge Five
+
+// START Advanced Challenge One - Javascript Quiz
+var _eventListenerQuizVis = document.getElementById("quizVisibility").addEventListener("click", quizVis)
+function quizVis() {
+    var vis = document.getElementById("quiz");
+    if (vis.style.display === "none") {
+        vis.style.display = "block";
+        document.getElementById("quizVisibility").innerHTML = "Hide Quiz"
+    } else {
+        vis.style.display = "none";
+        document.getElementById("quizVisibility").innerHTML = "Show Quiz"
+    }
+}
+
+var quiz = [];
+
+function Question(query, answer) {
+    this.query = query;
+    this.answer = answer
+}
+
+var questionOne = new Question("1) What is 1 + 1?", 2);
+quiz.push(questionOne);
+var questionTwo = new Question("2) What is 2 + 2?", 4);
+quiz.push(questionTwo);
+var questionThree = new Question("3) What is 3 + 3?", 6);
+quiz.push(questionThree);
+var questionFour = new Question("4) What is 4 + 4?", 8);
+quiz.push(questionFour);
+var questionFive = new Question("5) What is 5 + 5?", 10);
+quiz.push(questionFive);
+
+var questionLine = ["userInputDisSeventeenA", "userInputDisSeventeenB", "userInputDisSeventeenC", "userInputDisSeventeenD", "userInputDisSeventeenE"];
+
+for (i = 0; i < quiz.length; i += 1) {
+    var thisQuestion = quiz[i];
+    // Need to declare a variable as quiz[i], can't uses quiz[i].query
+    var questionLocation = questionLine[i];
+    document.getElementById(questionLocation).innerHTML = thisQuestion.query;
+}
+var _eventListenerThirty = document.getElementById("userInputB30").addEventListener("click", inputFunThirty)
+
+function inputFunThirty() {
+    var score = 0;
+    var answerOne = document.getElementById("userInputThirteen").value;
+    var answerTwo = document.getElementById("userInputFourteen").value;
+    var answerThree = document.getElementById("userInputFifteen").value;
+    var answerFour = document.getElementById("userInputSixteen").value;
+    var answerFive = document.getElementById("userInputSeventeen").value;
+    var allAnswers = [answerOne, answerTwo, answerThree, answerFour, answerFive];
+
+    if (answerOne == "" || answerTwo == "" || answerThree == "" || answerFour == "" || answerFive == "") {
+        alert("Please Answer All The Questions")
+    } else {
+        for (i = 0; i < quiz.length; i += 1) {
+            var thisQuestion = quiz[i];
+            var questionLocation = questionLine[i];
+            var thisAnswer = allAnswers[i];
+            if (thisQuestion.answer == thisAnswer) {
+                score += 1;
+                document.getElementById(questionLocation).innerHTML = thisQuestion.query + " " + thisAnswer + " is Correct!"
+            } else {
+                document.getElementById(questionLocation).innerHTML = thisQuestion.query + " " + thisAnswer + " is Incorrect!"
+            }
+        }
+        document.getElementById("userInputDisEighteen").innerHTML = "Your Score was: " + score + "/5";
+        if (score < 3) {
+            document.getElementById("userInputDisNineteen").innerHTML = "Poor :(";
+        } else if (score > 3) {
+            document.getElementById("userInputDisNineteen").innerHTML = "Great :)"
+        } else {
+            document.getElementById("userInputDisNineteen").innerHTML = "Average :/"
+        }
+    }
+}
+
+// END Advanced Challenge One

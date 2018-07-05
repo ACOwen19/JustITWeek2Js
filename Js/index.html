@@ -29,9 +29,9 @@
         <button id="userInputB6"> C7 Click!</button>
         <button id="userInputB7"> C8 Click!</button>
 
-        <div id="userInputDis"></div>
-        <div id="userInputDisTwo"></div>
-        <div id="userInputDisThree"></div>
+        <div id="userInputDis">..............</div>
+        <div id="userInputDisTwo">..............</div>
+        <div id="userInputDisThree">..............</div>
 
         <form>
             Date of Birth:
@@ -73,16 +73,16 @@
         <div id="userInputDisSix">C6: </div>
         <div id="userInputDisSeven">C7: </div>
         <br>
-        <div id="userInputDisEight"></div>
-        <div id="userInputDisNine"></div>
+        <div id="userInputDisEight">..............</div>
+        <div id="userInputDisNine">..............</div>
 
 
-                <h3>A2 Guess a number between 1 and 100</h3>
-                        <button id="startBtn">Start a New Game</button>
-                        <br><br> Enter your guess <input type="number" id="guess" />
-                        <button id="btn2">Check guess</button>
-                    <div><span id="resultGuess"></span></div>
-                    <div><span id="compareResult"></span></div>
+        <h3>A2 Guess a number between 1 and 100</h3>
+        <button id="startBtn">Start a New Game</button>
+        <br><br> Enter your guess <input type="number" id="guess" />
+        <button id="btn2">Check guess</button>
+        <div><span id="resultGuess"></span></div>
+        <div><span id="compareResult"></span></div>
 
 
         <ul>
@@ -101,7 +101,7 @@
 
     <div>
         <h1>DAY 3</h1>
-        <div id="userInputDisTen"></div>
+        <div id="userInputDisTen">..............</div>
         <button id="userInputB12"> Get Date/Time!</button>
         <br><br>
         <form>
@@ -120,27 +120,27 @@
         <button id="userInputB19"> C4 Click!</button>
         <button id="userInputB20"> C5 Click!</button>
         <button id="userInputB21"> C6 Click!</button>
+        <br><br>
+        <div id="userInputDisEleven">..............</div>
 
-        <div id="userInputDisEleven"></div>
-
-            <h3>A1: Random winner generator</h3>
-                <div id="userInputDisThirteen"></div>
-            <div>Enter the names who are in the draw and then select the random winner!</div><br>
-                <input id="userInputNine" type=text/>
-                <button id="userInputB22">Enter names</button><br><br>
-                <button id="userInputB23">Generate random winner</button>
-                       <div id="userInputDisTwelve"></div>
+        <h3>A1: Random winner generator</h3>
+        <div id="userInputDisThirteen"></div>
+        <div>Enter the names who are in the draw and then select the random winner!</div><br>
+        <input id="userInputNine" type=text/>
+        <button id="userInputB22">Enter names</button><br><br>
+        <button id="userInputB23">Generate random winner</button>
+        <div id="userInputDisTwelve"></div>
 
         <h3>A2: Interest Only Calculator</h3>
-         <form>
+        <form>
             Loan Amount (£):
             <input onkeyup="calculateInterest()" type="number" id="userInputTen" /> Interest Rate(%):
             <input onkeyup="calculateInterest()" type="number" id="userInputEleven" /> Length of Loan (Months):
             <input onkeyup="calculateInterest()" type="number" id="userInputTwelve" />
-             <!-- onkeyup will run the function calculate interest everytime a key finishes being active, this allows the calculator to respond in realtime to user inputs -->
+            <!-- onkeyup will run the function calculate interest everytime a key finishes being active, this allows the calculator to respond in realtime to user inputs -->
         </form>
-<!--         <button id="userInputB24">Calculate Interest</button> Button not required with live input-->
-   <div id="userInputDisFourteen"></div>
+        <!--         <button id="userInputB24">Calculate Interest</button> Button not required with live input-->
+        <div id="userInputDisFourteen"></div>
 
 
 
@@ -157,6 +157,54 @@
         </ul>
 
     </div>
+
+
+    <div>
+        <h1> DAY 4</h1>
+          <button id="userInputB25"> C1 Click!</button>
+        <button id="userInputB26"> C2 Click!</button>
+        <button id="userInputB27"> C3 Click!</button>
+        <button id="userInputB28"> C4 Click!</button>
+        <button id="userInputB29"> C5 Click!</button>
+        <br><br>
+        <div id="userInputDisFifteen">..............</div>
+        <div id="userInputDisSixteen">..............</div>
+
+        <h3>A1: Javascript Quiz</h3>
+        <button id="quizVisibility"> Show Quiz</button>
+
+        <div id="quiz" style="display: none">
+            <div id="userInputDisSeventeenA"></div>
+            <div id="userInputDisSeventeenB"></div>
+            <div id="userInputDisSeventeenC"></div>
+            <div id="userInputDisSeventeenD"></div>
+            <div id="userInputDisSeventeenE"></div>
+            <form>
+                1):
+                <input type="number" id="userInputThirteen" /> 2):
+                <input type="number" id="userInputFourteen" /> 3):
+                <input type="number" id="userInputFifteen" /> 4):
+                <input type="number" id="userInputSixteen" /> 5):
+                <input type="number" id="userInputSeventeen" />
+            </form>
+            <button id="userInputB30"> Submit!</button>
+
+            <div id="userInputDisEighteen"></div>
+            <div id="userInputDisNineteen"></div>
+        </div>
+
+        <ul>
+            <li>Challenge One - Create an Object with 3 properties and display the object back to the DOM</li>
+            <li>Challenge Two - Create an object and output each object property in a concatenated string onto a webpage</li>
+            <li>Challenge Three - Create an object with properties and a method (function) - access the method(output result to the DOM)</li>
+            <li>Challenge Four - Create a nested object and display the nested objecet property onto the webpage</li>
+            <li>Challenge Five - Build an object constructor: a) create 2 instances of the object b) display the properties of the object instances onto the webpage</li>
+            <li>A1 - Javascript Quiz</li>
+            <li></li>
+        </ul>
+
+    </div>
+
     <script src="resources/scripts/app.js"></script>
     <!-- Js is put in the body because you want HTML & CSS to load first so they are put in the head, funtcionality can come a little later so Js is put in the body. It might save 1/2 a seconds load time but small savings add up to a large amount of time. Always put it at the bottom  -->
 </body>
