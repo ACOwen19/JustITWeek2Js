@@ -1,0 +1,9 @@
+#carsTable, #carsTable th, #carsTable td {
+    border: solid 1px rgb(0,0,0)
+}
+
+
+/*tr:nth-child(odd) {background-color: rgb(162, 33, 33);};*/
+
+/*Interesting, all odd*/
+

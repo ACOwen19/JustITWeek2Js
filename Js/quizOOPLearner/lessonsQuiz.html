@@ -41,7 +41,8 @@
                     <p class="choose_quiz">Choose a quiz from the list below.</p>
 
                 </div>
-
+                <!--Currently by the CSS setting head2_cont to display: None, no need currently as not multiple quizzes-->
+                <!-- No current way to input a name but styling is in the css -->
             </div>
         </div>
     </section>
@@ -53,6 +54,9 @@
                     <div class="col-md-6 col-md-offset-3">
 
                         <button class="quiz_block" id="quiz_1" data-toggle="modal" data-target="#theQuiz" name="lessonsN" value="1">
+                            <!-- Is this all bootstrap/jquery stuff? -->
+                            <!-- data-target?  -->
+                            <!-- data toggle?  -->
                             <div class="icon_title">
                                 <span><i class="icon-html5-alt"></i></span>
                                 <h5 id="q1_title">HTML5</h5>
@@ -77,6 +81,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- Is this all bootstrap/jquery stuff? -->
+                <!-- data-dismiss? -->
+                <!-- tabindex? -->
+                <!-- role? -->
+                <!-- aria-label/labelledby/hidden? -->
+                <!-- &times? -->
                 <h4 class="modal-title" id="myModalLabel">
                     <span id="qAll_title"></span>
                 </h4>
@@ -158,6 +168,8 @@
       crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JQUERY/Bootstrap to learn -->
     <script src="myJS.js"></script>
 
 </body>
